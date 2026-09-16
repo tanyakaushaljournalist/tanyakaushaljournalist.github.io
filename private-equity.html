@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Private Equity reporting">
+    <title>Private Equity | Tanya Kaushal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: #000000;
+            background-color: #ffffff;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Typography & Header */
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .beat-intro {
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: #333333;
+        }
+
+        /* Navigation */
+        nav {
+            margin-bottom: 2rem;
+            font-weight: bold;
+            border-bottom: 1px dashed #000000;
+            padding-bottom: 1rem;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin-right: 1.2rem;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            text-decoration: underline;
+        }
+
+        /* Link Preview Card */
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px;
+            border: 1px solid #d0d0d0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #000000;
+            background-color: #ffffff;
+            margin-bottom: 1.2rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .link-card:hover {
+            border-color: #000000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-thumb {
+            width: 130px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .card-summary {
+            font-size: 0.85rem;
+            color: #444444;
+        }
+
+        .card-domain {
+            font-size: 0.8rem;
+            color: #777777;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 1rem;
+            border-top: 1px solid #000000;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #000000;
+            text-decoration: underline;
+            margin: 0 0.5rem;
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .link-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card-thumb {
+                width: 100%;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tanya Kaushal</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="private-equity.html" class="active">Private Equity</a>
+        <a href="wall street and economy.html">Wall Street and Economy</a>
+        <a href="data investigations.html">Data Investigations</a>
+    </nav>
+
+    <main>
+        <h2>Private Equity</h2>
+        <p class="beat-intro">Deep dives on fund finance, operations, talent and tech. All articles can be found at: https://the-drawdown.com/article/author/2301</p>
+
+        <!-- Article Card 1 -->
+        <a href="https://the-drawdown.com/article/spotting-the-cyber-imposter" class="link-card" target="_blank">
+            <img src="images/cyber imposter.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">Spotting the cyber imposter | The Drawdown</span>
+                <span class="card-summary">Research indicates a disparity between cybersecurity disclosure and reality but who can be held responsible?</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+
+        <!-- Article Card 2 -->
+        <a href="https://the-drawdown.com/article/lp-demands-are-reshaping-the-cfo-function" class="link-card" target="_blank">
+            <img src="images/LP demands are reshaping the CFO function.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">LP demands are reshaping the CFO function | The Drawdown</span>
+                <span class="card-summary">A survey by CSC found that LP requests for transparency are expanding while data challenges persist for GPs</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+
+        <!-- Article Card 3 -->
+        <a href="https://the-drawdown.com/article/fund-registrations-climb-in-cayman" class="link-card" target="_blank">
+            <img src="images/fund registrations climb in Cayman.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">Fund registrations climb in Cayman | The Drawdown</span>
+                <span class="card-summary">LP interest in private credit and continuation vehicles is driving demand as the domicile makes regulatory adjustments for tokenised funds</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+      
+ <!-- Article Card 4 -->
+        <a href="https://the-drawdown.com/article/fund-pulse-check" class="link-card" target="_blank">
+            <img src="images/fund pulse check.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">Fund pulse check | The Drawdown</span>
+                <span class="card-summary">How can fund managers build an effective stress test as preventive measures are being established?</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+
+      <!-- Article Card 5 -->
+        <a href="https://the-drawdown.com/article/carry-confusion-putting-talent-retention-at-risk" class="link-card" target="_blank">
+            <img src="images/carry opacity putting talent retention at risk.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">Carry opacity putting talent retention at risk | The Drawdown</span>
+                <span class="card-summary">Research from Allvue finds a lack of structure with carry and compensation programmes</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+
+       <!-- Article Card 6 -->
+        <a href="https://the-drawdown.com/article/distributing-the-next-private-wealth-wave" class="link-card" target="_blank">
+            <img src="images/distributing the next private wealth wave.png" alt="Article Image" class="card-thumb">
+            <div class="card-details">
+                <span class="card-title">Distributing the next private wealth wave | The Drawdown</span>
+                <span class="card-summary">Research from Clearstream examines why distribution strategies are key in the shift to private wealth and semi-liquids</span>
+                <span class="card-domain">the-drawdown.com</span>
+            </div>
+        </a>
+      
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:tk2926@columbia.com">Email</a> |
+            <a href="https://linkedin.com/in/tanya-kaushal-journalist-" target="_blank">LinkedIn</a>
+            <a href=""
+        </div>
+        <p style="margin-top: 0.5rem;">Copyright (c) 2026 Tanya Kaushal.</p>
+    </footer>
+
+</body>
+</html>
