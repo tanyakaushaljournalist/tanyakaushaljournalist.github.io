@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Journalism and Visual Projects by Tanya Kaushal.">
+    <title>Data Projects | Tanya Kaushal</title>
+    <style>
+        /* Base Typewriter Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: #000000;
+            background-color: #ffffff;
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .beat-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .beat-description {
+            font-size: 0.95rem;
+            color: #333333;
+            margin-bottom: 2rem;
+            border-bottom: 1px dashed #000;
+            padding-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #000000;
+            margin-right: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Metrics / Callout Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .metric-card {
+            border: 1px solid #000;
+            padding: 1.2rem;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .metric-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border-top: 1px dashed #000;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Data Project Card */
+        .project-card {
+            border: 2px solid #000000;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            background-color: #ffffff;
+            position: relative;
+            transition: box-shadow 0.15s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .project-year {
+            font-size: 0.9rem;
+            font-weight: bold;
+            border: 1px solid #000;
+            padding: 2px 6px;
+        }
+
+        .project-summary {
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Flourish Chart Embed Container */
+        .flourish-container {
+            border: 1px solid #000;
+            padding: 0.8rem;
+            margin: 1.2rem 0;
+            background-color: #ffffff;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Tech Stack Tags */
+        .tech-tags {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            border: 1px solid #000;
+            padding: 2px 8px;
+            text-transform: uppercase;
+            background-color: #ffffff;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .project-link:hover {
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 1rem;
+            border-top: 1px solid #000;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .social-links a {
+            color: #000;
+            margin: 0 0.5rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .project-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Tanya Kaushal</h1>
+        <p>Investigative Journalist & Feature Writer</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="private-equity.html">Private Equity</a>
+        <a href="wall-street-economy.html">Wall Street & Economy</a>
+        <a href="data-projects.html" class="active">Data Projects</a>
+    </nav>
+
+    <main>
+        <h2 class="beat-title">Data & Visual Investigations</h2>
+        <p class="beat-description">Combining web scraping, spatial analysis, public filings, and quantitative modeling to reveal underlying economic and social trends.</p>
+
+        <!-- Metric Stat Summary Grid -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-number">50k+</div>
+                <div class="metric-label">SEC Filings Parsed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">$1.2T</div>
+                <div class="metric-label">Infrastructure Spending Tracked</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number">50</div>
+                <div class="metric-label">States Analyzed for Labor Gaps</div>
+            </div>
+        </section>
+
+        <!-- Data Projects List -->
+        <section class="project-list">
+
+            <!-- Data Project 1 -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-title">1. U.S. Infrastructure Allocation Index</span>
+                    <span class="project-year">2026</span>
+                </div>
+                <p class="project-summary">An interactive analysis tracking federal funding disbursement under the $1.2 Trillion Infrastructure Law. Scraped federal state-by-state funding sheets to measure local economic impact against regional unemployment rates.</p>
+                
+                <!-- Flourish Chart Embed 1 -->
+                <div class="flourish-container">
+                    <!-- Replace "1234567" with your actual Flourish visualization ID -->
+                    <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/1234567">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                        <noscript>
+                            <img src="https://public.flourish.studio/visualisation/1234567/thumbnail" width="100%" alt="bar-chart-race visualization" />
+                        </noscript>
+                    </div>
+                </div>
+
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Flourish</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">QGIS</span>
+                </div>
+
+                <a href="https://finance.yahoo.com/news/heres-how-each-us-state-is-benefiting-from-bidens-12t-infrastructure-law-163433733.html" class="project-link" target="_blank">[ View Interactive Map & Article ]</a>
+            </article>
+
+            <!-- Data Project 2 -->
+            <article class="project-card">
+                <div class="project-header">
+                    <span class="project-title">2. Corporate Tax Break & Deduction Database</span>
+                    <span class="project-year">2025</span>
+                </div>
+                <p class="project-summary">Extracted 10-K filings across Fortune 500 companies to quantify savings generated by specific provisions of the 2017 Tax Cuts and Jobs Act. Created an open-source relational database mapping effective tax rates against capital investments.</p>
+                
+                <!-- Flourish Chart Embed 2 -->
+                <div class="flourish-container">
+                    <!-- Replace "7654321" with your second Flourish visualization ID -->
+                    <div class="flourish-embed" data-src="visualisation/7654321">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                        <noscript>
+                            <img src="https://public.flourish.studio/visualisation/7654321/thumbnail" width="100%" alt="visualization" />
+                        </noscript>
+                    </div>
+                </div>
+
+                <div class="tech-tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">Flourish</span>
+                    <span class="tag">BeautifulSoup</span>
+                    <span class="tag">SEC EDGAR API</span>
+                </div>
+
+                <a href="https://finance.yahoo.com/news/companies-billion-tax-breaks-trump-law-154129876.html" class="project-link" target="_blank">[ View Data Investigation ]</a>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:tanya.kaushal@example.com">Email</a> |
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter/X</a> |
+            <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2026 Tanya Kaushal</p>
+    </footer>
+
+</body>
+</html>
