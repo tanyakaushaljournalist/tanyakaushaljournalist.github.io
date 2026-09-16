@@ -135,10 +135,10 @@
     </header>
 
     <nav>
-        <a href="#index.html">About</a>
-        <a href="#private-equity.html">Private Equity</a>
-        <a href="#Wall Street and Economy.html">Wall Street and Economy</a>
-        <a href="#Data Projects.html">Data Projects</a>
+        <a href="About">About</a>
+        <a href="private-equity">Private Equity</a>
+        <a href="Wall Street and Economy">Wall Street and Economy</a>
+        <a href="Data Projects">Data Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 
