@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Tanya Kaushal, Journalist and Writer.">
+    <meta name="description" content="Portfolio of Tanya Kaushal, Journalist.">
     <title>Tanya Kaushal | Journalist</title>
     <style>
-        /* CSS Variables for easy color theme changes */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #e74c3c;
-            --bg-color: #fcfcfc;
-            --text-color: #333333;
-            --light-bg: #f5f5f5;
-        }
-
+        /* Minimalist Typewriter CSS */
         * {
             margin: 0;
             padding: 0;
@@ -23,266 +14,189 @@
         }
 
         body {
-            font-family: 'Georgia', serif; /* Serif font for a journalistic feel */
+            font-family: 'Courier New', Courier, monospace;
+            color: #000000;
+            background-color: #ffffff;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-        }
-
-        h1, h2, h3, nav {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            font-style: italic;
-            font-family: 'Georgia', serif;
-            color: #bdc3c7;
-        }
-
-        nav {
-            background-color: var(--secondary-color);
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Main Content Container */
-        .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Section Styling */
-        section {
-            margin-bottom: 4rem;
+        h1, h2, h3 {
+            font-weight: bold;
         }
 
-        section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
             padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* About Section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .about-content img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--light-bg);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Portfolio/Articles Section */
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .article-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .article-card h3 {
-            font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
 
-        .article-card h3 a {
-            color: var(--primary-color);
+        h2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #000;
+            padding-bottom: 0.2rem;
         }
 
-        .article-card h3 a:hover {
-            color: var(--accent-color);
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin-right: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: auto;
+            border: 1px solid #000;
+            padding: 4px;
+            /* Makes the image black and white to match the theme */
+            filter: grayscale(100%); 
+        }
+
+        /* Articles */
+        .article-item {
+            margin-bottom: 2rem;
         }
 
         .article-meta {
-            font-size: 0.85rem;
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         /* Footer */
         footer {
-            background-color: var(--primary-color);
-            color: white;
+            margin-top: 4rem;
+            padding-top: 1rem;
+            border-top: 1px solid #000;
             text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
+            font-size: 0.9rem;
         }
 
         .social-links {
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .social-links a {
-            color: white;
             margin: 0 0.5rem;
-            font-size: 1.1rem;
         }
 
-        .social-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-content {
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .about-section {
                 flex-direction: column;
-                text-align: center;
             }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 0.5rem 0;
+            .profile-pic {
+                width: 150px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
         <h1>Tanya Kaushal</h1>
         <p>Investigative Journalist & Feature Writer</p>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <a href="#about">About</a>
-        <a href="#portfolio">Selected Works</a>
+        <a href="#work">Selected Works</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container">
-        
+    <main>
         <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!-- Replace src with your actual image URL or local path like 'images/profile.jpg' -->
-                <img src="https://ui-avatars.com/api/?name=Tanya+Kaushal&background=e74c3c&color=fff&size=200" alt="Tanya Kaushal">
+            <h2>About</h2>
+            <div class="about-section">
+                <!-- Replace with your actual photo path -->
+                <img src="https://ui-avatars.com/api/?name=Tanya+Kaushal&background=000&color=fff&size=200" alt="Tanya Kaushal" class="profile-pic">
                 <div>
-                    <p>Hi, I'm Tanya Kaushal. I am a journalist dedicated to uncovering compelling stories at the intersection of culture, politics, and human rights. With over [X years] of experience in newsrooms, I specialize in long-form features and investigative reporting.</p>
-                    <br>
+                    <p>Hi, I am Tanya Kaushal. I am a journalist dedicated to uncovering compelling stories at the intersection of culture, politics, and human rights. With over [X] years of experience in newsrooms, I specialize in long-form features and investigative reporting.</p>
+                    
                     <p>My work has been featured in [Publication 1], [Publication 2], and [Publication 3]. Whether I am reporting from the field or analyzing complex datasets, my goal is always to bring clarity and empathy to the stories that matter most.</p>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio">
+        <section id="work">
             <h2>Selected Works</h2>
-            <div class="article-grid">
-                
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <h3><a href="#" target="_blank">The Hidden Impact of Urban Development</a></h3>
-                    <p class="article-meta">Published in The Daily Chronicle | October 2025</p>
-                    <p>An in-depth look at how rapid gentrification is reshaping local communities and displacing long-time residents.</p>
-                </article>
 
-                <!-- Article 2 -->
-                <article class="article-card">
-                    <h3><a href="#" target="_blank">Voices from the Frontlines of Climate Change</a></h3>
-                    <p class="article-meta">Published in Global News Weekly | August 2025</p>
-                    <p>Interviews and profiles of environmental activists fighting for policy changes in vulnerable coastal cities.</p>
-                </article>
+            <article class="article-item">
+                <h3><a href="#" target="_blank">The Hidden Impact of Urban Development</a></h3>
+                <div class="article-meta">Published in The Daily Chronicle | October 2025</div>
+                <p>An in-depth look at how rapid gentrification is reshaping local communities and displacing long-time residents.</p>
+            </article>
 
-                <!-- Article 3 -->
-                <article class="article-card">
-                    <h3><a href="#" target="_blank">Tech's Diversity Problem: A Data Analysis</a></h3>
-                    <p class="article-meta">Published in Tech Insider | May 2025</p>
-                    <p>A comprehensive breakdown of hiring statistics across top tech firms, revealing systemic gaps in representation.</p>
-                </article>
+            <article class="article-item">
+                <h3><a href="#" target="_blank">Voices from the Frontlines of Climate Change</a></h3>
+                <div class="article-meta">Published in Global News Weekly | August 2025</div>
+                <p>Interviews and profiles of environmental activists fighting for policy changes in vulnerable coastal cities.</p>
+            </article>
 
-                <!-- Article 4 -->
-                <article class="article-card">
-                    <h3><a href="#" target="_blank">A Profile on Local Heroes</a></h3>
-                    <p class="article-meta">Published in City Magazine | January 2025</p>
-                    <p>Highlighting the extraordinary efforts of ordinary citizens organizing mutual aid funds during crises.</p>
-                </article>
+            <article class="article-item">
+                <h3><a href="#" target="_blank">Tech's Diversity Problem: A Data Analysis</a></h3>
+                <div class="article-meta">Published in Tech Insider | May 2025</div>
+                <p>A comprehensive breakdown of hiring statistics across top tech firms, revealing systemic gaps in representation.</p>
+            </article>
 
-            </div>
+            <article class="article-item">
+                <h3><a href="#" target="_blank">A Profile on Local Heroes</a></h3>
+                <div class="article-meta">Published in City Magazine | January 2025</div>
+                <p>Highlighting the extraordinary efforts of ordinary citizens organizing mutual aid funds during crises.</p>
+            </article>
+
         </section>
+    </main>
 
-    </div>
-
-    <!-- Footer / Contact Section -->
     <footer id="contact">
         <div class="social-links">
-            <!-- Add your real links here -->
             <a href="mailto:tanya.kaushal@example.com">Email</a> |
             <a href="https://twitter.com/yourhandle" target="_blank">Twitter/X</a> |
             <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a> |
             <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
         </div>
-        <p>&copy; 2026 Tanya Kaushal. All rights reserved.</p>
+        <p>Copyright (c) 2026 Tanya Kaushal.</p>
     </footer>
 
 </body>
