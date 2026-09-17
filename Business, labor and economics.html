@@ -8,6 +8,7 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -15,7 +16,7 @@
             color: #000000;
             background-color: #ffffff;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -63,51 +64,61 @@
             text-decoration: underline;
         }
 
-        /* Link Preview Card */
+        /* Article Grid Container (3 Cards per Row) */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 1.5rem;
+        }
+
+        /* Link Preview Card Box */
         .link-card {
             display: flex;
-            align-items: center;
-            gap: 16px;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 12px;
             border: 1px solid #d0d0d0;
             border-radius: 12px;
             text-decoration: none;
             color: #000000;
             background-color: #ffffff;
-            margin-bottom: 1.2rem;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
         }
 
         .link-card:hover {
             border-color: #000000;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
         }
 
         .card-thumb {
-            width: 130px;
-            height: 75px;
+            width: 100%;
+            height: 130px;
             object-fit: cover;
-            border-radius: 4px;
-            flex-shrink: 0;
+            border-radius: 6px;
             border: 1px solid #000;
+            margin-bottom: 10px;
         }
 
         .card-details {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            justify-content: space-between;
+            flex-grow: 1;
         }
 
         .card-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: bold;
             line-height: 1.3;
+            margin-bottom: 8px;
         }
 
         .card-domain {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #777777;
-            margin-top: 2px;
+            margin-top: auto;
         }
 
         /* Footer */
@@ -125,18 +136,19 @@
             margin: 0 0.5rem;
         }
 
-        /* Mobile Layout */
-        @media (max-width: 600px) {
+        /* Responsive Layout Adjustments */
+        @media (max-width: 850px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
             body {
                 padding: 1rem;
             }
-            .link-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .card-thumb {
-                width: 100%;
-                height: 160px;
+            .articles-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -159,6 +171,8 @@
         <h2>Business, Labor & Economics</h2>
         <p class="beat-intro">Reporting at Yahoo Finance on the latest developments in labor trends, fiscal policy, S&P 500 companies and the US economy. All articles include data visualizations and can be found <a href="https://finance.yahoo.com/author/tanya-kaushal/">here.</a></p>
 
+        <!-- Articles Box Grid -->
+        <section class="articles-grid">
 
             <!-- Article 1 -->
             <a href="https://finance.yahoo.com/news/heres-how-each-us-state-is-benefiting-from-bidens-12t-infrastructure-law-163433733.html" class="link-card" target="_blank">
@@ -196,7 +210,6 @@
                 </div>
             </a>
 
-
             <!-- Article 6 -->
             <a href="https://finance.yahoo.com/news/ryan-reynolds-celebrity-business-deals-mint-mobile-sale-142414596.html" class="link-card" target="_blank">
                 <img src="https://unsplash.com/photos/a-view-of-two-tall-buildings-from-the-ground-64grc3AMrH8" alt="Thumbnail" class="card-thumb">
@@ -215,7 +228,6 @@
                 </div>
             </a>
 
-
             <!-- Article 13 -->
             <a href="https://finance.yahoo.com/news/infrastructure-jobs-booming-rebuild-america-130635734.html" class="link-card" target="_blank">
                 <img src="https://unsplash.com/photos/man-in-blue-long-sleeve-shirt-and-blue-vest-k9Dc5zT1Gq0" alt="Thumbnail" class="card-thumb">
@@ -224,7 +236,6 @@
                     <span class="card-domain">finance.yahoo.com</span>
                 </div>
             </a>
-
 
             <!-- Article 18 -->
             <a href="https://finance.yahoo.com/news/lack-immigration-labor-market-shortage-economist-191213573.html" class="link-card" target="_blank">
@@ -270,7 +281,6 @@
                     <span class="card-domain">finance.yahoo.com</span>
                 </div>
             </a>
-
 
         </section>
     </main>
