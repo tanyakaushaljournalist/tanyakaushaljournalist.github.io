@@ -61,7 +61,10 @@
         }
 
         /* Navigation */
-         nav {
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
             margin-bottom: 2rem;
             font-weight: bold;
             border-bottom: 1px dashed #000000;
@@ -71,7 +74,6 @@
         nav a {
             color: #000000;
             text-decoration: none;
-            margin-right: 1.2rem;
             text-transform: uppercase;
             font-size: 0.95rem;
         }
@@ -88,13 +90,15 @@
         }
 
         .profile-pic {
-            width: 300px;
-            height: 250px;
+            width: 260px;
+            height: 240px;
+            object-fit: cover;
             border: 1px solid #000;
             padding: 4px; 
+            flex-shrink: 0;
         }
 
-         /* Link Preview Card */
+        /* Link Preview Card */
         .link-card {
             display: flex;
             align-items: center;
@@ -116,7 +120,7 @@
 
         .card-thumb {
             width: 130px;
-            height: 75px;
+            height: 85px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
@@ -162,17 +166,62 @@
             margin: 0 0.5rem;
         }
 
-        /* Mobile */
-        @media (max-width: 600px) {
+        /* Tablet Adjustments (Portrait / Landscape) */
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .about-section {
+                gap: 1.2rem;
+            }
+
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 580px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 2rem;
+            }
+
             .about-section {
                 flex-direction: column;
+                align-items: center;
             }
+
             .profile-pic {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%; /* Turns the square image into a circle */
-  object-fit: cover;   
-}
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                margin-bottom: 0.5rem;
+            }
+
+            .link-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .card-thumb {
+                width: 100%;
+                height: 160px;
+            }
         }
     </style>
 </head>
@@ -208,25 +257,24 @@
             <h2>Recent Work</h2>
 
             <!-- Article Card 1 -->
-        <a href="https://the-drawdown.com/article/spotting-the-cyber-imposter" class="link-card" target="_blank">
-            <img src="images/cyber imposter.png" alt="Article Image" class="card-thumb">
-            <div class="card-details">
-                <span class="card-title">Spotting the cyber imposter | The Drawdown</span>
-                <span class="card-summary">Research indicates a disparity between cybersecurity disclosure and reality but who can be held responsible?</span>
-                <span class="card-domain">the-drawdown.com</span>
-            </div>
-        </a>
+            <a href="https://the-drawdown.com/article/spotting-the-cyber-imposter" class="link-card" target="_blank">
+                <img src="images/cyber imposter.png" alt="Article Image" class="card-thumb">
+                <div class="card-details">
+                    <span class="card-title">Spotting the cyber imposter | The Drawdown</span>
+                    <span class="card-summary">Research indicates a disparity between cybersecurity disclosure and reality but who can be held responsible?</span>
+                    <span class="card-domain">the-drawdown.com</span>
+                </div>
+            </a>
 
-        <!-- Article Card 2 -->
-        <a href="https://the-drawdown.com/article/lp-demands-are-reshaping-the-cfo-function" class="link-card" target="_blank">
-            <img src="images/LP demands are reshaping the CFO function.png" alt="Article Image" class="card-thumb">
-            <div class="card-details">
-                <span class="card-title">LP demands are reshaping the CFO function | The Drawdown</span>
-                <span class="card-summary">A survey by CSC found that LP requests for transparency are expanding while data challenges persist for GPs</span>
-                <span class="card-domain">the-drawdown.com</span>
-            </div>
-        </a>
-
+            <!-- Article Card 2 -->
+            <a href="https://the-drawdown.com/article/lp-demands-are-reshaping-the-cfo-function" class="link-card" target="_blank">
+                <img src="images/LP demands are reshaping the CFO function.png" alt="Article Image" class="card-thumb">
+                <div class="card-details">
+                    <span class="card-title">LP demands are reshaping the CFO function | The Drawdown</span>
+                    <span class="card-summary">A survey by CSC found that LP requests for transparency are expanding while data challenges persist for GPs</span>
+                    <span class="card-domain">the-drawdown.com</span>
+                </div>
+            </a>
 
         </section>
     </main>
